@@ -1,3 +1,30 @@
 body {
-    background: gray;
+    background: lightblue;
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0 );
+    width: 1px;
+    width: 1px;
+    margin: -1px;
+}
+.form-hidden {
+    display: none;
+}
+.submenu-hidden {
+    display: none;
+}
+li {
+    list-style: none;
+}
+.main-header,
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav,
+.nav-list,
+.user-btns {
+    display: flex;
 }
