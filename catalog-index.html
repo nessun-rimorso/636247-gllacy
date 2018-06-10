@@ -9,7 +9,7 @@
 <body>
     <header class="main-header">
        <nav class="nav">
-            <a class="nav-logo">
+            <a class="nav-logo" href="index.html">
                 <img class="logo-gllacy" src="img/Logo.svg" width="156" height="64" alt="Gllacy Shop">
             </a>
             <ul class="nav-list">
@@ -100,9 +100,59 @@
               <a class="breadcrumbs-link" href="#">Сливочное</a>
           </li>
       </ul>
-      <h1 class="title">Сливочное мороженое</h1>
-
-      <!-- form -->
+      <h1 class="main-title">Сливочное мороженое</h1>
+      <form class="filters" action="https://echo.htmlacademy.ru" method="post">
+         <fieldset class="filter-sorting filter-fieldset">
+             <legend class="filter-title">Сортировка</legend>
+             <div class="filter-field">
+                 <select class="sorting" name="sort[]">
+                     <option value="popular" >по популярности</option>
+                     <option value="less expensive">сначала не дорогие</option>
+                     <option value="expensive">сначала дорогие</option>
+                     <option value="fatness">по жирности</option>
+                 </select>
+             </div>
+         </fieldset>
+         <fieldset class="filter-price filter-fieldset">
+             <legend class="filter-title">Цена: 100 руб. - 500 руб.</legend>
+             <div class="filter-field">
+                 <div class="filter-price-range">
+                     <div class="line"></div>
+                     <div class="ball-1"></div>
+                     <div class="ball-2"></div>
+                 </div>
+             </div>
+         </fieldset>
+         <fieldset class="filter-fatness filter-fieldset">
+             <legend class="filter-title">Жирность</legend>
+             <div class="filter-field">
+                <input class="input-hidden" type="radio" name="percent" id="percent-min">
+                <label class="filter-signature-input" for="percent-min">0%</label>
+                <input class="input-hidden" type="radio" name="percent" id="percent-10" checked>
+                <label class="filter-signature-input" for="percent-10">до 10%</label>
+                <input class="input-hidden" type="radio" name="percent" id="percent-30">
+                <label class="filter-signature-input" for="percent-30">до 30%</label>
+                <input class="input-hidden" type="radio" name="percent" id="percent-max">
+                <label class="filter-signature-input" for="percent-max">выше 30%</label>
+             </div>
+         </fieldset>
+         <fieldset class="filter-stuffing filter-fieldset">
+            <legend class=" filter-title">Наполнители</legend>
+            <div class="filter-field">
+                <input class="input-hidden" type="checkbox" id="chocolate" name="chocolate" checked>
+                <label class="filter-signature-input"  for="chocolate">шоколадные</label>
+                <input class="input-hidden" type="checkbox" id="sugar" name="sugar" checked>
+                <label class="filter-signature-input" for="sugar">сахарные присыпки</label>
+                <input class="input-hidden" type="checkbox" id="fruits" name="fruits">
+                <label class="filter-signature-input" for="fruits">фрукты</label>
+                <input class="input-hidden" type="checkbox" id="syrups" name="syrups">
+                <label class="filter-signature-input" for="syrups">сиропы</label>
+                <input class="input-hidden" type="checkbox" id="jams" name="jams">
+                <label class="filter-signature-input" for="jams">джемы</label>
+            </div>
+         </fieldset>
+         <button class="filter-btn" type="button">Применить</button>
+      </form>
 <section class="goods">
     <h2 class="visually-hidden">Каталог товаров</h2>
     <ul class="goods-items">
