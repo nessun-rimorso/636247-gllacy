@@ -1,5 +1,15 @@
 body {
-    background: #9aafa3;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #ffffff;
+    background-color: #849d8f;
+}
+a {
+  text-decoration: none;
 }
 .visually-hidden {
     position: absolute;
@@ -8,23 +18,427 @@ body {
     width: 1px;
     margin: -1px;
 }
-.form-hidden {
-    display: none;
+
+/* Навигационное меню */
+.nav-list {
+    list-style: none;
+    color: #ffffff;
 }
-.submenu-hidden {
-    display: none;
+.nav-link {
+    color: inherit;
+    font-weight: bold;
+    line-height: 18px;
+    border-bottom: 1px solid #a9bfb3;
 }
-li {
+.nav-item{
+    position: relative;
+}
+.submenu {
+    list-style: none;
+    background-color: #f8f7f4;
+    color: #323232;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    display: none;
+    position: absolute;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+}
+.nav-item:hover .submenu,
+.nav-item:focus .submenu {
+    display: block;
+}
+.submenu-link {
+    color: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
     list-style: none;
 }
-.main-header,
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.submenu-item:first-of-type {
+    border-bottom: 1px solid #d1d0ce;
 }
-.nav,
-.nav-list,
+
+/* Пользовательские кнопки */
 .user-btns {
-    display: flex;
+    list-style: none;
 }
+.user-btn{
+    position: relative;
+}
+
+.form-hidden {
+    display: none;
+    position: absolute;
+}
+.user-btn:hover .form-hidden,
+.user-btn:focus .form-hidden {
+    display: block;
+}
+.user-btn-image {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 45px;
+    border: none;
+}
+.user-btn-image:first-of-type {
+    border-radius: 50%;
+}
+.user-btn-text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    color: #ffffff;
+}
+.form-hidden {
+    background-color: #f8f7f4;
+    min-width: 277px;
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    color: #323232;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.form-link {
+    color: #323232;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+.table-total {
+    border-top: 1px solid #cacac7;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Кнопки x */
+.delete-product {
+    font-size: 0;
+    border: none;
+}
+.delete-product::after {
+    content: "";
+}
+.delete-product::before {
+    content: "";
+}
+
+/* Кнопки по всему документу */
+.button {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 45px;
+    border: none;
+    background-color: #ed5a3d;
+    background-image: linear-gradient(rgb(242,104,67), rgb(231,74,53));
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+/* Блок контакты */
+.text-time {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+}
+.text-tel {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: bold;
+    color: inherit;
+}
+
+/* Слайдер */
+.slider-list {
+    list-style: none;
+    position: relative;
+    min-height: 400px;
+}
+.slide-text {
+    font-size: 60.468px;
+    font-weight: bold;
+    line-height: 1.006;
+    text-align: center;
+}
+.slide-hidden {
+    display: none;
+}
+.slide:nth-of-type(1) {
+    display: block;
+    position: absolute;
+    background-image: url(../img/ice-cream-1.png);
+    background-repeat: no-repeat;
+    background-size: 1045px 881px;
+}
+.slide:nth-of-type(2) {
+    display: block;
+    background-image: url(../img/ice-cream-2.png);
+    background-repeat: no-repeat;
+    background-size: 1065px 859px;
+}
+.slide:nth-of-type(3) {
+    display: block;
+    background-color: #849d8f;
+    background-image: url(../img/ice-cream-3.png);
+    background-repeat: no-repeat;
+    background-size: 1079px 854px;
+}
+.slider-control {
+    font-size: 0;
+    border: 2px solid #ffffff;
+    background-color: none;
+    border-radius: 50%;
+    background-color: #849d8f;
+    width: 21px;
+    height: 21px;
+}
+.slider-btn {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: bold;
+}
+/* Блоки промо */
+.promo-items {
+    list-style: none;
+}
+.promo-item {
+    background-color: #c91e3a;
+    background-image: url(../img/background-crimson.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    max-height: 229px;
+    max-width: 560px;
+    overflow: auto;
+    border-radius: 14px;
+}
+.promo-item:last-of-type {
+    background-color: #532914;
+    background-image: url(../img/background-chocolate.jpg);
+}
+.promo-title {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: bold;
+}
+.promo-text {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+/* Блоки товаров */
+.goods-items {
+    list-style: none;
+}
+
+goods-item {
+    position: relative;
+}
+.goods-item::before {
+    content: "";
+    background-color: #ffffff;
+    background-image: url(../img/hit.svg);
+    width: 61px;
+    height: 61px;
+    border-radius: 50%;
+    position: absolute;
+}
+.goods-item-image {
+    border-radius: 50%;
+}
+.goods-text {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: -55px;
+}
+.goods-text span {
+    font-size: 30px;
+}
+.text-description {
+    font-weight: 500;
+    border-bottom: 1px solid #a9bfb3;
+}
+
+/* Описание магазина */
+.info-list {
+    list-style: none;
+}
+.description-shop{
+    background-image: url(../img/pattern.jpg);
+    background-repeat: repeat;
+    background-color: #e6d6b5;
+    color: #323232;
+}
+.title-info {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.info-text {
+    position: relative;
+}
+/*
+selector::before {
+    content: "";
+    background-image: url(../img/mini-cream.svg);
+    width: 49px;
+    height: 49px;
+    position: absolute;
+}
+selector::before {
+    content: "";
+    background-image: url(../img/leaf.svg);
+    width: 49px;
+    height: 49px;
+    position: absolute;
+}
+selector::before::before {
+    content: "";
+    background-image: url(../img/cow.svg);
+    width: 49px;
+    height: 49px;
+    position: absolute;
+}
+selector::before::before {
+    content: "";
+    background-image: url(../img/Thermometer.svg);
+    width: 49px;
+    height: 49px;
+    position: absolute;
+}
+*/
+
+/* Блоки новости + подписка */
+.row-box {
+    background-color: #ffffff;
+    color: #323232;
+    height: 220px;
+    width: 560px;
+    border-radius: 14px;
+}
+.news {
+    font-weight: 500;
+    background-image: url(../img/background-strawberry.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.news-blog {
+    color: inherit;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    border-bottom: 2px solid #323232;
+    width: 100px;
+}
+.subscribe {
+    background-image: repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 10px, #92cdff 10px, #92cdff 20px, #f8f7f4 20px, #f8f7f4 30px, #fe9e90 30px, #fe9e90 40px, #f8f7f4 40px);
+}
+.subscribe-bakcground {
+    background-color: #f8f7f4;
+    color: #5a5a5a;
+}
+
+/* Карта */
+
+.contact {
+    background-color: #fdfefe;
+    color: #323232;
+}
+.address-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: inherit;
+}
+.address-text b {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+
+}
+
+/* Соц. сети */
+
+.social-list {
+    list-style: none;
+}
+.social-button {
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    opacity: 0.8;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+.social-link {
+    font-size: 0;
+}
+.social-button:nth-of-type(1) {
+    background-image: url(../img/tw.svg);
+}
+.social-button:nth-of-type(2) {
+    background-image: url(../img/insta.svg);
+}
+.social-button:nth-of-type(3) {
+    background-image: url(../img/fb.svg);
+}
+.social-button:nth-of-type(4) {
+    background-image: url(../img/vk.svg);
+}
+
+/* Ссылки в футере */
+
+.links-list {
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Копирайт */
+/* Попап */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
