@@ -47,9 +47,9 @@
                    <img src="img/Lupa.svg" alt="Поиск" height="17" width="17">
                    <p class="visually-hidden">Поиск</p>
                </button>
-               <form class="form-hidden" action="https://echo.htmlacademy.ru" method="get">
+               <form class="user-btn-form user-search form-hidden" action="https://echo.htmlacademy.ru" method="get">
                    <label class="visually-hidden" for="search">Форма поиска</label>
-                   <input class="form-search field" type="search" name="search" placeholder="Что ищем">
+                   <input class="field" type="search" name="search" placeholder="Что ищем">
                </form>
            </li>
            <li class="user-btn">
@@ -57,14 +57,16 @@
                    <img src="img/Inter.svg" alt="Вход" height="19" width="21">
                    <p>Вход</p>
                 </button>
-              <form class="form-hidden" action="https://echo.htmlacademy.ru" method="post">
+              <form class="user-btn-form user-login form-hidden" action="https://echo.htmlacademy.ru" method="post">
                   <label class="visually-hidden" for="email">Форма ввода электронной почты</label>
-                  <input class="form-email field" type="email" name="email" placeholder="Электронная почта" required autocomplete="on">
+                  <input class="field" type="email" name="email" placeholder="Электронная почта" required autocomplete="on">
                   <label class="visually-hidden" for="password">Форма ввода пароля</label>
-                  <input class="form-password field" type="password" name="password" placeholder="Пароль" required autocomplete="off">
+                  <input class="field" type="password" name="password" placeholder="Пароль" required autocomplete="off">
                   <button class="button btn-inter" type="submit">Войти</button>
-                  <a class="form-link link-forget-password" href="#">Забыли пароль?</a>
-                  <a class="form-link link-login" href="#">Новая регистрация</a>
+                  <div class="form-link">
+                      <a class="link-forget-password" href="#">Забыли пароль?</a>
+                      <a class="link-login" href="#">Новая регистрация</a>
+                  </div>
               </form>
            </li>
            <li class="user-btn">
@@ -73,22 +75,22 @@
                   <p class="empty-cart">Пусто</p>
                   <p class="full-cart">2 товара</p>
               </button>
-                  <div class="form-hidden">
+                  <div class="form-hidden cart">
                    <table class="cart-table">
                        <tr>
-                           <td class="table-data"><button class="delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
-                           <td class="table-data">Пломбир с апельсиновым джемом</td>
-                           <td class="table-data">1,5 кг х <span>200 руб.</span></td>
-                           <td class="table-data">300 руб.</td>
+                           <td class="delete-product"><button class="btn-delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
+                           <td class="table-goods ice-cream-1">Пломбир с апельсиновым джемом</td>
+                           <td class="price-kg">1,5 кг х <span>200 руб.</span></td>
+                           <td class="worth">300 руб.</td>
                        </tr>
                        <tr>
-                           <td class="table-data"><button class="delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
-                           <td class="table-data">Клубничный пломбир с присыпкой из белого шоколада</td>
-                           <td class="table-data">1,5 кг х <span>300 руб.</span></td>
-                           <td class="table-data">450 руб.</td>
+                           <td  class="delete-product"><button class="btn-delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
+                           <td class="table-goods ice-cream-2">Клубничный пломбир с присыпкой из белого шоколада</td>
+                           <td class="price-kg">1,5 кг х <span>300 руб.</span></td>
+                           <td class="worth">450 руб.</td>
                        </tr>
                        <tr>
-                           <td class="table-total" colspan="4">Итого: 750 руб.</td>
+                           <td class="total-worth" colspan="4">Итого: 750 руб.</td>
                        </tr>
                    </table>
                    <a href="#" class="button cart-link">Оформить заказ</a>

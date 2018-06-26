@@ -42,17 +42,6 @@ img {
     display: flex;
 }
 
-.container {
-    display: flex;
-}
-
-.filters {
-    flex-wrap: wrap; 
-}
-.container {
-    flex-direction: column;
-}
-
 /* Стили */
 
 /* Навигационное меню */
@@ -101,8 +90,6 @@ img {
 }
 
 
-
-
 /* подменю */ 
 
 .submenu {
@@ -112,18 +99,18 @@ img {
     text-align: left;
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-    display: none;
     position: absolute;
-    left: 0px;
+    top: 45px;
+    left: -7px;
     padding: 0;
     min-height: 171px;
     min-width: 142px;
+    z-index: 10;
+    opacity: 0;
 }
 .nav-item:hover .submenu,
 .nav-item:focus .submenu {
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
+    opacity: 1;
 }
 .submenu-link {
     color: inherit;
@@ -147,6 +134,12 @@ img {
     background-color: #fbded7;
     outline: none;
 }
+.submenu-item:last-of-type:hover ,
+.submenu-item:last-of-type:focus {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
 .submenu-item:not(:first-of-type):active {
     background-color: rgb(249, 172, 159); 
 }
@@ -178,12 +171,26 @@ img {
 }
 
 .form-hidden {
-    display: none;
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
+    z-index: 10;
+    top: 35px;
+    right: 0;
+    background-color: #f8f7f4;
+    min-width: 277px;
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    color: #323232;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 0;
 }
 .user-btn:hover .form-hidden,
 .user-btn:focus .form-hidden {
-    display: block;
+    opacity: 1;
     outline: none;
 }
 
@@ -247,61 +254,150 @@ img {
     border-radius: 45px;
 }
 
+/* Поля форм */
 
-.form-hidden {
-    background-color: #f8f7f4;
-    min-width: 277px;
-    border-radius: 6px;
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-    color: #323232;
+.field {
+    box-shadow: inset 0 0 0 2px #d3d3d2;
+    border: none;
+    background-color: #ffffff;
+    color: #999999;
     font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 5px;
+    padding: 13px 15px;
+    margin: 0;
+    
+}
+.field:hover {
+    box-shadow: inset 0 0 0 2px #c7c6c5;
+    outline: none;
+}
+.field:focus {
+    box-shadow: inset 0 0 0 2px #8fbdec;
+    outline: none;
+}
 
-    padding-bottom: 20px;
-    padding-top: 20px;
+.user-search .field {
+    width: 311px;
+    margin: 20px 15px;
+}
+.user-login .field {
+    width: 241px;
+    margin-bottom: 20px;
+}
+.user-login {
+    padding: 20px 17px 22px 19px;
+}
+.btn-inter {
+    padding: 13px 25px;
+    margin-right: 20px;
 }
 .form-link {
+    width: 50%;
+}
+.form-link a {
     color: #323232;
     font-size: 13px;
     line-height: 24px;
     font-weight: normal;
     border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
-.table-total {
+.cart {
+    padding: 20px 15px;
+}
+.cart-table {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: normal;
+    padding-bottom: 15px;
+    width: 540px;
+    border-collapse: collapse;
+}
+.cart-table td {
+    border: 25px solid #f8f7f4;
+} 
+.total-worth {
     border-top: 1px solid #cacac7;
     font-size: 15px;
     line-height: 18px;
     font-weight: bold;
     text-align: right;
 }
+.table-goods {
+    padding-left: 47px;
+    position: relative;
+    width: 265px;
+}
+.price-kg {
+    width: 95px;
+}
+.worth {
+    width: 80px;
+}
+.btn-delete-product {
+    margin-left: 5px;
+}
+
+.ice-cream-1::before {
+    content: "";
+    position: absolute;
+    height: 33px;
+    width: 33px;
+    background-image: url(../img/mini-cream-orange.jpg);
+    background-color: #f3c591;
+    border-radius: 50%;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ice-cream-2::before {
+    content: "";
+    position: absolute;
+    height: 33px;
+    width: 33px;
+    background-image: url(../img/mini-cream-strawberry.jpg);
+    background-color: #ee7495;
+    border-radius: 50%;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cart-link {
+    padding: 10px 15px;
+    margin-left: auto;
+}
+
+
+
 
 /* Кнопки x */
-.delete-product {
+.btn-delete-product {
     border: none;
     background-color: inherit;
-    width: 25px;
-    height: 25px;
+    width: 11px;
+    height: 11px;
     position: relative;
 }
-.delete-product::after {
+.btn-delete-product::after {
     content: "";
     width: 1px;
     height: 15px;
     position: absolute;
     background-color: #323232;
-    top: 5px;
-    left: 15px;
+    top: 0px;
+    left: 0px;
     transform: rotate(45deg);
 }
-.delete-product::before {
+.btn-delete-product::before {
     content: "";
     width: 1px;
     height: 15px;
     position: absolute;
     background-color: #323232;
-    top: 5px;
-    left: 15px;
+    top: 0px;
+    left: 0px;
     transform: rotate(-45deg);
 }
 
@@ -354,19 +450,29 @@ img {
 /* Слайдер */
 
 .slider {
-    min-height: 700px;
+    min-height: 490px;
+    position: relative;
 }
 .slider-list {
     list-style: none;
-    position: relative;
+    position: absolute;
     min-height: 400px;
     padding: 0;
+    
+    z-index: -10;
+}
+.slide {
+    margin-top: -154px;
+    width: 1045px;
+    height: 900px;
 }
 .slide-text {
     font-size: 60.468px;
     font-weight: bold;
     line-height: 1.006;
     text-align: center;
+    position: absolute;
+    top: 333px;
 }
 .slide-hidden {
     display: none;
@@ -403,7 +509,14 @@ img {
     font-size: 32px;
     line-height: 44px;
     font-weight: bold;
+    padding: 10px 40px 10px 40px;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    position: relative;
+    top: 360px;
+    left: 50%;
+    transform: translate(-50%);
 }
+
 .slider-control:hover, 
 .slider-control:focus {
     background-color: rgba(248, 247, 244, 0.4);
@@ -545,7 +658,8 @@ img {
     flex-wrap: wrap;
 }
 .info-item {
-    width: 518px;   
+    width: 518px;
+    position: relative;
 }
 .description-shop{
     background-image: url(../img/pattern.jpg);
@@ -567,40 +681,41 @@ img {
     padding: 0;
 }
 .info-text {
-    position: relative;
     margin: 0;
     padding: 14px 0px 10px 55px;
 }
-/*
-selector::before {
+.info-item:nth-of-type(1)::before {
     content: "";
+    position: absolute;
     background-image: url(../img/mini-cream.svg);
+    background-color: transparent;
     width: 49px;
     height: 49px;
-    position: absolute;
+    left: 0px;
 }
-selector::before {
+
+.info-item:nth-of-type(2)::before {
     content: "";
     background-image: url(../img/leaf.svg);
     width: 49px;
     height: 49px;
     position: absolute;
 }
-selector::before::before {
+.info-item:nth-of-type(3)::before {
     content: "";
     background-image: url(../img/cow.svg);
     width: 49px;
     height: 49px;
     position: absolute;
 }
-selector::before::before {
+.info-item:nth-of-type(4)::before {
     content: "";
     background-image: url(../img/Thermometer.svg);
     width: 49px;
     height: 49px;
     position: absolute;
 }
-*/
+
 
 /* Блоки новости + подписка */
 .row {
@@ -637,6 +752,10 @@ selector::before::before {
     border-bottom: 2px solid #323232;
     width: 100px;
 }
+
+.form-link a:hover,
+.form-link a:focus,
+.form-link a:active,
 .news a:hover,
 .news a:focus,
 .news a:active {
@@ -715,6 +834,7 @@ selector::before::before {
 }
 .map {
     background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
     min-height: 430px;
 }
 /* footer */
@@ -851,19 +971,6 @@ selector::before::before {
     transform: rotate(-45deg);
 }
 
-/* Поля форм */
-
-.field {
-    box-shadow: inset 0 0 0 2px #d3d3d2;
-    border: none;
-    background-color: #ffffff;
-    color: #999999;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    border-radius: 5px;
-    padding: 13px 15px;
-}
 .popup-field {
     border: 2px solid rgba(154, 154, 154, 0.52);
     background-color: #ffffff;
@@ -874,14 +981,11 @@ selector::before::before {
     border-radius: 5px;
     padding: 13px 15px;
 }
-.field:hover {
-    box-shadow: inset 0 0 0 2px #c7c6c5;
-    outline: none;
-}
-.field:focus {
-    box-shadow: inset 0 0 0 2px #8fbdec;
-    outline: none;
-}
+
+
+
+
+
 
 /* вторая страница */
 

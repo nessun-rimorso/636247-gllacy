@@ -47,9 +47,9 @@
                    <img src="img/Lupa.svg" alt="Поиск" height="17" width="17">
                    <p class="visually-hidden">Поиск</p>
                </button>
-               <form class="user-btn-form form-hidden" action="https://echo.htmlacademy.ru" method="get">
+               <form class="user-btn-form user-search form-hidden" action="https://echo.htmlacademy.ru" method="get">
                    <label class="visually-hidden" for="search">Форма поиска</label>
-                   <input class="form-search field" type="search" name="search" placeholder="Что ищем">
+                   <input class="field" type="search" name="search" placeholder="Что ищем">
                </form>
            </li>
            <li class="user-btn">
@@ -57,14 +57,16 @@
                    <img src="img/Inter.svg" alt="Вход" height="19" width="21">
                    <p class="user-btn-text">Вход</p>
                 </button>
-              <form class="user-btn-form form-hidden" action="https://echo.htmlacademy.ru" method="post">
+              <form class="user-btn-form user-login form-hidden" action="https://echo.htmlacademy.ru" method="post">
                   <label class="visually-hidden" for="email">Форма ввода электронной почты</label>
-                  <input class="form-email field" type="email" name="email" placeholder="Электронная почта" required autocomplete="on">
+                  <input class="field" type="email" name="email" placeholder="Электронная почта" required autocomplete="on">
                   <label class="visually-hidden" for="password">Форма ввода пароля</label>
-                  <input class="form-password field" type="password" name="password" placeholder="Пароль" required autocomplete="off">
+                  <input class="field" type="password" name="password" placeholder="Пароль" required autocomplete="off">
                   <button class="button btn-inter" type="submit">Войти</button>
-                  <a class="form-link link-forget-password" href="#">Забыли пароль?</a>
-                  <a class="form-link link-login" href="#">Новая регистрация</a>
+                  <div class="form-link">
+                      <a class="link-forget-password" href="#">Забыли пароль?</a>
+                      <a class="link-login" href="#">Новая регистрация</a>
+                  </div>
               </form>
            </li>
            <li class="user-btn">
@@ -105,13 +107,13 @@
        <section class="slider main-width">
           <ul class="slider-list">
               <li class="slide slide-hidden">
-                  <p class="slide-text">Крем-брюле и пломбир с малиновым джемом</p>
+                  <p class="slide-text">Крем-брюле и пломбир с&nbsp;малиновым джемом</p>
               </li>
               <li class="slide-hidden">
-                  <p class="slide-text">Шоколадный пломбир и лимонный сорбет</p>
+                  <p class="slide-text">Шоколадный пломбир и&nbsp;лимонный сорбет</p>
               </li>
               <li class="slide-hidden">
-                  <p class="slide-text">Пломбир с помадкой и клубничный щербет</p>
+                  <p class="slide-text">Пломбир с помадкой и&nbsp;клубничный щербет</p>
               </li>
           </ul>
            <div class="slider-controls">
