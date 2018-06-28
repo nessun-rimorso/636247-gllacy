@@ -87,6 +87,20 @@ img {
     border: none;
 }
 
+.nav-list .active {
+    color: #ffffff;
+    background-color: #d07058;
+    border-radius: 45px;
+    margin: 0;
+    padding: 8px 13px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+.nav-list .active:hover {
+    margin: 0;
+    padding: 8px 13px;
+}
 
 /* подменю */ 
 
@@ -98,17 +112,17 @@ img {
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     position: absolute;
-    top: 45px;
+    top: 40px;
     left: -7px;
     padding: 0;
     margin: 0;
     min-width: 142px;
     z-index: 10;
-    opacity: 0;
+    display: none;
 }
-.nav-link:hover .submenu,
-.nav-link:focus .submenu {
-    opacity: 1;
+.nav-link:hover + .submenu,
+.nav-link:focus + .submenu {
+    display: block;
 }
 .submenu-link {
     color: inherit;
@@ -117,40 +131,47 @@ img {
     line-height: 16px;
 }
 
-.submenu-item {
+
+.submenu-link, 
+.submenu-item span {
     padding: 6px 19px;
+    display: block;
+    margin: 1.5px 0;
 }
 
-.submenu-item:first-of-type {
+.submenu-item span {
     border-bottom: 1px solid #d1d0ce;
     margin-left: 6px;
     margin-right: 9px;
     padding-left: 13px;
 }
-.submenu-item:not(:first-of-type):hover,
-.submenu-item:not(:first-of-type):focus {
+.submenu-link:hover,
+.submenu-link:focus {
     background-color: #fbded7;
     outline: none;
 }
-.submenu-item:last-of-type:hover ,
-.submenu-item:last-of-type:focus {
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
-}
 
-.submenu-item:not(:first-of-type):active {
+.submenu-item:last-of-type {
+    margin-bottom: 6px;
+}
+.submenu-link:active {
     background-color: rgb(249, 172, 159); 
 }
 
-.active .nav-link, 
-.nav-list .active, 
-.active:not(:first-of-type):hover,
-.active:not(:first-of-type):focus {
+.submenu .active {
     color: #ffffff;
     background-color: #d07058;
+    margin: 0;
+    padding: 6px 13px;
     box-shadow: none;
     outline: none;
     border: none;
+    border-radius: 0;
+}
+.submenu .active:hover,
+.submenu .active:focus,
+.submenu .active:active {
+    padding: 6px 13px;
 }
 
 /* Пользовательские кнопки */
@@ -161,17 +182,16 @@ img {
     margin-left: auto;
     display: flex;
     align-items: flex-start;
-}
-.user-btn{
-    position: relative;
     margin-top: 15px;
 }
+
 .user-btn:not(:last-of-type){
     margin-right: 10px;
 }
 
+/*  form-hidden   opacity: 0; пока что сделала, чтобы не бесило  */
+
 .form-hidden {
-    opacity: 0;
     display: flex;
     flex-wrap: wrap;
     position: absolute;
@@ -187,65 +207,60 @@ img {
     font-size: 13px;
     line-height: 16px;
     padding: 0;
+    display: none;
 }
-.user-btn:hover .form-hidden,
-.user-btn:focus .form-hidden {
-    opacity: 1;
+.user-btn-image:hover .form-hidden,
+.user-btn-image:focus .form-hidden {
     outline: none;
+    display: flex;
 }
 
 .user-btn-image {
-    background-color: transparent;
     border: none;
+    margin: 0;
+    padding: 8px 16px;
     font-size: 14px;
     line-height: 16px;
-    font-weight: normal;
+    font-weight: 700;
     color: inherit;
     position: relative;
-    padding: 8px 16px;
+    padding: 7px 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 45px;
+    display: flex;
+}
+.btn-magnifier {
+    padding: 7px;
+}
+.user-btn-image svg {
+    padding-right: 7px;
+    margin-top: -2px;
+}
+.btn-magnifier svg {
+    margin: 0;
+    padding: 0;
 }
 .user-btn-image p {
     margin: 0;
-    padding-left: 28px;
+    padding: 0;
 }
-    
-.user-btn {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 45px;
+.user-btn-image:not(.cart-complete):hover path, 
+.user-btn-image:not(.cart-complete):focus path,
+.user-btn-image:not(.cart-complete):hover circle, 
+.user-btn-image:not(.cart-complete):focus circle {
+    fill: #343434;
 }
-.user-btn:first-of-type {
-    border-radius: 50%;
-}
-.user-btn:first-of-type img {
-    margin-left: -8px;
-}
-.user-btn:first-of-type .user-btn-image {
-    padding: 16px;
-}
-
-.user-btn-image img {
-    position: absolute;
-    top: 6px;
-    left: 16px;
-}
-
-.user-btn:hover img, 
-.user-btn:focus img {
-    filter: invert(1);
-}
-.user-btn:hover, 
-.user-btn:focus {
+.user-btn-image:hover, 
+.user-btn-image:focus {
     background-color: #ffffff;
     color: #323232;
 } 
+
 .user-btn-image:not(.cart-complete) .full-cart,
 .cart-complete .empty-cart {
     display: none;
 }
-.cart-complete:hover img,
-.cart-complete:focus img {
-    filter: none;
-}
+
 .cart-complete,
 .cart-complete:hover,
 .cart-complete:focus {
@@ -253,6 +268,8 @@ img {
     color: #323232;
     border-radius: 45px;
 }
+
+
 
 /* Поля форм */
 
@@ -668,7 +685,7 @@ img {
     margin: 0;
     padding: 0;
     bottom: 75px;
-    position: relative;
+    position: absolute;
     
 }
 .goods-text span {
@@ -953,23 +970,32 @@ img {
     padding: 0;
     margin: 0;
 }
-.social-button {
+.social-link {
+    display: block;
     width: 32px;
     height: 32px;
-    background-repeat: no-repeat; /* что оно не повторяет, не ясно */
-    background-size: auto;
-    opacity: 0.8;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
 }
 .social-button:not(:last-of-type) {
     margin-right: 14px;
 }
-
-.social-link:hover {
+.social-link path {
+    fill: rgba(255, 255, 255, 0.8);
+}
+.social-link:focus {
+    outline: none;
+}
+.social-link:hover path,
+.social-link:focus path {
     fill: #ffffff;
-} 
-
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    
+}
+.social-link:active path {
+    fill: #e9e9e9;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
 
 
 
@@ -1041,9 +1067,9 @@ img {
     color: inherit;
     border-bottom: 1px solid #a9bfb3;
 }
-.copyright a:hover, 
-.copyright a:focus,
-.copyright a:active {
+.copyright .copyright-link:hover, 
+.copyright .copyright-link:focus,
+.copyright .copyright-link:active {
     color: #ffbc9e;
     border-color: rgba(249, 172, 159, 0.3);
     outline: none;
@@ -1110,6 +1136,15 @@ img {
 /* вторая страница */
 
 
+.inner-page {
+    background-image: linear-gradient(#9db1a5 0%, #849d8f 590px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .breadcrumbs {
     list-style: none;
     display: flex;
@@ -1155,6 +1190,7 @@ img {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 24px;
 }
 .filter-title {
     font-weight: 500;
@@ -1170,8 +1206,11 @@ img {
     color: inherit;
     background-color: rgba(248, 247, 244, 0.2);
     border-radius: 45px;
-    padding: 8px 11px;
     margin-right: 15px;
+    display: flex;
+}
+.filter-sorting {
+    padding: 8px 11px;
 }
 
 .sorting {
@@ -1193,6 +1232,7 @@ img {
 }
 .filter-price {
     position: relative;
+    padding: 7px 21px;
 }
 .btn-price {
     border: none;
@@ -1206,23 +1246,23 @@ img {
     transform: translateY(-50%);
 }
 .btn-price:first-of-type {
-    left: 24px;
+    left: 36px;
 }
 .btn-price:last-of-type {
-    left: 121px;
+    left: 134px;
 }
 .price-line {
     background-color: rgba(248, 247, 244, 0.5);
     width: 176px;
     height: 4px;
-    margin: 8px 10px;
+    margin: 9px 0;
 }
 .price-range {
     background-color: inherit;
     height: inherit;
     width: 75px;
     position: absolute;
-    left: 45px;
+    left: 57px;
 }
 .btn-price:hover,
 .btn-price:focus {
@@ -1232,58 +1272,62 @@ img {
     box-shadow: inset 0px 0px 0px 9px #ffffff;
     outline: none;
 }
-
-
+.filter-signature {
+    display: flex;
+}
 
 .filter-fatness {
-    padding: 10px;
+    padding: 6px 17px;
+}
+.filter-fatness .filter-signature {
+    padding-top: 6px;
+}
+.filter-fatness .filter-signature:not(:last-of-type) {
+    margin-right: 17px;
 }
 
+.filter-stuffing {
+    padding: 5px 16px;
+    min-width: 672px;
+    justify-content: space-between;
+}
+.filter-stuffing .filter-signature {
+    padding-top: 2px;
+}
+.filter-stuffing .filter-signature:not(:last-of-type) {
+    margin-right: 1px;
+}
 
-.input-hidden[type="radio"] + .filter-signature,
-.input-hidden[type="checkbox"]  + .filter-signature{
+.radio-indicator {
     position: relative;
-}
-
-.input-hidden[type="radio"] + .filter-signature::before {
-    content: "";
     width: 22px;
     height: 22px;
-    position: absolute;
     background-color: transparent;
     box-shadow: inset 0px 0px 0px 4px #e6ebe9;
     border-radius: 50%;
-    top: 0px;
-    left: -24px;
+    margin-right: 10px;
 }
-.input-hidden[type="radio"][checked] + .filter-signature::after {
+
+.checkbox-indicator {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 2px #e6ebe9;
+    margin-right: 12px;
+}
+.filter-signature input[type="radio"]:checked ~ .radio-indicator::before {
     content: "";
     width: 8px;
     height: 8px;
     position: absolute;
     background-color: #e6ebe9;
     border-radius: 50%;
-    top: 6.5px;
-    left: -17px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
-
-.filter-signature {
-    margin-left: 27px;
-    margin-right: 17px;
-}
-
-.input-hidden[type="checkbox"] + .filter-signature::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    background-color: transparent;
-    box-shadow: inset 0px 0px 0px 2px #e6ebe9;
-    top: 0px;
-    left: -24px;
-}
-
-.input-hidden[type="checkbox"][checked] + .filter-signature::after {
+.filter-signature input[type="checkbox"]:checked ~ .checkbox-indicator::before {
     content: "";
     width: 8px;
     height: 14px;
@@ -1292,20 +1336,48 @@ img {
     border: 4px solid #e6ebe9;
     border-left-width: 0;
     border-top-width: 0;
-    transform: rotate(45deg);
-    top: -4px;
-    left: -16px;
+    transform: rotate(45deg) translateX(-50%);
+    top: 0%;
+    left: 50%;
 }
 
-
-.input-hidden[type="radio"] + .filter-signature:hover::before,
-.input-hidden[type="radio"] + .filter-signature:focus::before {
+.radio-indicator:hover,
+.radio-indicator:focus {
     box-shadow: inset 0px 0px 0px 4px #ffffff;
 }
-.input-hidden[type="checkbox"] + .filter-signature:hover::before,
-.input-hidden[type="checkbox"] + .filter-signature:focus::before {
+.radio-indicator:hover::before,
+.radio-indicator:focus::before {
+    background-color: #ffffff;
+}
+
+.radio-indicator:disabled::before {
+    background-color: #b5c4bc;
+}
+
+.radio-indicator:disabled,
+.checkbox-indicator:disabled {
+    box-shadow: inset 0px 0px 0px 4px #b5c4bc;
+}
+
+.checkbox-indicator:disabled::before {
+    border-color: #b5c4bc;
+}
+
+.checkbox-indicator:hover,
+.checkbox-indicator:focus {
     box-shadow: inset 0px 0px 0px 2px #ffffff;
 }
+
+.checkbox-indicator:hover::before,
+.checkbox-indicator:focus::before {
+    border-color: #ffffff;
+}
+
+
+
+
+/*
+
 .input-hidden[type="radio"][checked] + .filter-signature:hover::after,
 .input-hidden[type="radio"][checked] + .filter-signature:focus::after {
     background-color: #ffffff;
@@ -1314,6 +1386,7 @@ img {
 .input-hidden[type="checkbox"][checked] + .filter-signature:focus::after {
     border-color: #ffffff;
 }
+
 
 .input-hidden[type="radio"] + .filter-signature:disabled::before,
 .input-hidden[type="checkbox"] + .filter-signature:disabled::before {
@@ -1327,6 +1400,9 @@ img {
     border-color: #b5c4bc;
 }
 
+*/
+
+
 .filter-btn {
     font-size: 16px;
     line-height: 18px;
@@ -1336,8 +1412,8 @@ img {
     box-shadow: inset 0 0 0 2px #fbfcfb;
     border: none;
     border-radius: 45px;
-    padding: 10px 28px;
-    margin-bottom: 10px;
+    padding: 9px 28px;
+    margin-bottom: 15px;
     align-self: flex-end;
 }
 .filter-btn:hover, 
@@ -1364,6 +1440,8 @@ img {
     display: flex;
     align-items: center;
     margin-left: auto;
+    margin-top: 33px;
+    margin-bottom: 28px;
 }
 .paginator-link {
     display: block;
@@ -1378,20 +1456,24 @@ img {
     border-bottom-width: 0;
     transform: rotate(45deg);
     background-color: transparent;
-    margin: 0 20px;
+    margin-right: 0;
+    margin-left: 14px;
 }
 .paginator-prev {
     transform: rotate(-135deg);
+    margin-right: 14px;
+    margin-left: 0;
 }
 
 .paginator-link:not(.paginator-prev):not(.paginator-next) {
-    padding: 4px 10px;
+    padding: 3px 10px;
     border-radius: 50%;
 }
 
 .paginator-link:hover,
 .paginator-link:focus {
     background: rgba(255, 255, 255, 0.2);
+    outline: none;
 }
 .paginator-link:active {
     background: rgba(255, 255, 255, 1);
@@ -1403,6 +1485,7 @@ img {
 .paginator-active:focus {
     background: rgba(255, 255, 255, 1);
     color: #323232;
+    outline: none;
 }
 
 .paginator-prev {

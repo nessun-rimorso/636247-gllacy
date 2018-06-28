@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="inner-page">
     <div class="wraper">
     <header class="main-header">
        <nav class="nav">
@@ -15,12 +16,12 @@
                 <img class="logo-gllacy" src="img/Logo.svg" width="156" height="64" alt="Gllacy Shop">
             </a>
             <ul class="nav-list">
-               <li class="nav-item active">
-                   <a class="nav-link">Каталог</a>
+               <li class="nav-item">
+                   <a class="nav-link active">Каталог</a>
                    <ul class="submenu">
-                       <li class="submenu-item">Новинки</li>
-                       <li class="submenu-item active">
-                           <a class="submenu-link">Сливочное</a>
+                       <li class="submenu-item"><span>Новинки</span></li>
+                       <li class="submenu-item">
+                           <a class="submenu-link  active">Сливочное</a>
                        </li>
                        <li class="submenu-item">
                            <a href="#" class="submenu-link">Щербеты</a>
@@ -43,38 +44,39 @@
        </nav>
        <ul class="user-btns">
            <li class="user-btn">
-               <button class="user-btn-image" type="button">
-                   <img src="img/Lupa.svg" alt="Поиск" height="17" width="17">
+               <button class="user-btn-image btn-magnifier" type="button">
+                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"><path fill="#FFF" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
                    <p class="visually-hidden">Поиск</p>
-               </button>
-               <form class="user-btn-form user-search form-hidden" action="https://echo.htmlacademy.ru" method="get">
+                   <form class="user-btn-form user-search form-hidden" action="https://echo.htmlacademy.ru" method="get">
                    <label class="visually-hidden" for="search">Форма поиска</label>
                    <input class="field" type="search" name="search" placeholder="Что ищем">
                </form>
+               </button>
+               
            </li>
            <li class="user-btn">
                 <button class="user-btn-image" type="button">
-                   <img src="img/Inter.svg" alt="Вход" height="19" width="21">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"><g fill="#FFF"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
                    <p>Вход</p>
-                </button>
-              <form class="user-btn-form user-login form-hidden" action="https://echo.htmlacademy.ru" method="post">
+                    <form class="user-btn-form user-login form-hidden" action="https://echo.htmlacademy.ru" method="post">
                   <label class="visually-hidden" for="email">Форма ввода электронной почты</label>
                   <input class="field" type="email" name="email" placeholder="Электронная почта" required autocomplete="on">
                   <label class="visually-hidden" for="password">Форма ввода пароля</label>
                   <input class="field" type="password" name="password" placeholder="Пароль" required autocomplete="off">
-                  <button class="button btn-inter" type="submit">Войти</button>
+                  <a class="button btn-inter" href="#">Войти</a>
                   <div class="form-link">
                       <a class="link-forget-password" href="#">Забыли пароль?</a>
                       <a class="link-login" href="#">Новая регистрация</a>
                   </div>
               </form>
+                </button>
+              
            </li>
            <li class="user-btn">
               <button class="user-btn-image cart-complete" type="button">
-                  <img src="img/cart2.svg" alt="Корзина" height="20" width="21">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/></svg>
                   <p class="empty-cart">Пусто</p>
                   <p class="full-cart">2 товара</p>
-              </button>
                   <div class="form-hidden cart">
                    <table class="cart-table">
                        <tr class="row-1">
@@ -95,6 +97,7 @@
                    </table>
                    <a href="#" class="button cart-link">Оформить заказ</a>
                </div>
+              </button>   
            </li>
        </ul>
         <ul class="breadcrumbs">
@@ -129,7 +132,7 @@
              </div>
          </fieldset>
          <fieldset class="filter-fieldset">
-             <legend class="filter-title">Цена: 100 руб. - 500 руб.</legend>
+             <legend class="filter-title">Цена: 100 руб. – 500 руб.</legend>
                  <div class="filter-price filter-field">
                      <div class="price-line">
                          <div class="price-range"></div>
@@ -141,29 +144,57 @@
          <fieldset class="filter-fieldset">
              <legend class="filter-title">Жирность</legend>
              <div class="filter-fatness filter-field">
-                <input class="input-hidden visually-hidden" type="radio" name="percent" id="percent-min">
-                <label class="filter-signature" for="percent-min">0%</label>
-                <input class="input-hidden visually-hidden" type="radio" name="percent" id="percent-10" checked>
-                <label class="filter-signature" for="percent-10">до 10%</label>
-                <input class="input-hidden visually-hidden" type="radio" name="percent" id="percent-30">
-                <label class="filter-signature" for="percent-30">до 30%</label>
-                <input class="input-hidden visually-hidden" type="radio" name="percent" id="percent-max">
-                <label class="filter-signature" for="percent-max">выше 30%</label>
+                <label class="filter-signature">
+                    <input class="visually-hidden" type="radio" name="percent">
+                    <span class="radio-indicator"></span>
+                    0%
+                 </label>
+                <label class="filter-signature">
+                    <input class="visually-hidden" type="radio" name="percent" checked>
+                    <span class="radio-indicator"></span>
+                    до 10%
+                 </label>
+                <label class="filter-signature">
+                    <input class="visually-hidden" type="radio" name="percent">
+                    <span class="radio-indicator"></span>
+                    до 30%
+                 </label>
+                <label class="filter-signature">
+                    <input class="visually-hidden" type="radio" name="percent">
+                    <span class="radio-indicator"></span>
+                    выше 30%
+                 </label>
              </div>
          </fieldset>
-         <fieldset class="filter-stuffing filter-fieldset">
-            <legend class=" filter-title">Наполнители</legend>
-            <div class="filter-field">
-                <input class="input-hidden  visually-hidden"  type="checkbox" id="chocolate" name="chocolate" checked>
-                <label class="filter-signature"  for="chocolate">шоколадные</label>
-                <input class="input-hidden visually-hidden" type="checkbox" id="sugar" name="sugar" checked>
-                <label class="filter-signature" for="sugar">сахарные присыпки</label>
-                <input class="input-hidden visually-hidden" type="checkbox" id="fruits" name="fruits">
-                <label class="filter-signature" for="fruits">фрукты</label>
-                <input class="input-hidden visually-hidden" type="checkbox" id="syrups" name="syrups">
-                <label class="filter-signature" for="syrups">сиропы</label>
-                <input class="input-hidden visually-hidden" type="checkbox" id="jams" name="jams">
-                <label class="filter-signature" for="jams">джемы</label>
+         <fieldset class="filter-fieldset">
+            <legend class="filter-title">Наполнители</legend>
+            <div class="filter-stuffing filter-field">
+                <label class="filter-signature">
+                    <input class="input-hidden  visually-hidden"  type="checkbox" name="chocolate" checked>
+                    <span class="checkbox-indicator"></span>
+                    шоколадные
+                </label>
+                <label class="filter-signature">
+                    <input class="input-hidden visually-hidden" type="checkbox" name="sugar" checked>
+                    <span class="checkbox-indicator"></span>
+                    сахарные присыпки
+                </label>
+                <label class="filter-signature">
+                    <input class="input-hidden visually-hidden" type="checkbox" name="fruits">
+                    <span class="checkbox-indicator"></span>
+                    фрукты
+                </label>
+                <label class="filter-signature">
+                    <input class="input-hidden visually-hidden" type="checkbox" name="syrups">
+                    <span class="checkbox-indicator"></span>
+                    сиропы
+                </label>
+                
+                <label class="filter-signature">
+                    <input class="input-hidden visually-hidden" type="checkbox" name="jams">
+                    <span class="checkbox-indicator"></span>
+                    джемы
+                </label>
             </div>
          </fieldset>
          <button class="filter-btn" type="button">Применить</button>
@@ -340,6 +371,7 @@
             <p class="text-copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright-link">HTML Academy</a> ©2018</p>
         </section>
     </footer>
+    </div>
     </div>
 </body>
 </html>
