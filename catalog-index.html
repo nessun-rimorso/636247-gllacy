@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wraper">
-    <header class="main-header main-width">
+    <header class="main-header">
        <nav class="nav">
             <a class="nav-logo" href="index.html">
                 <img class="logo-gllacy" src="img/Logo.svg" width="156" height="64" alt="Gllacy Shop">
@@ -77,15 +77,15 @@
               </button>
                   <div class="form-hidden cart">
                    <table class="cart-table">
-                       <tr>
+                       <tr class="row-1">
                            <td class="delete-product"><button class="btn-delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
-                           <td class="table-goods ice-cream-1">Пломбир с апельсиновым джемом</td>
+                           <td class="table-goods table-cream-1">Пломбир с апельсиновым джемом</td>
                            <td class="price-kg">1,5 кг х <span>200 руб.</span></td>
                            <td class="worth">300 руб.</td>
                        </tr>
-                       <tr>
+                       <tr class="row-2">
                            <td  class="delete-product"><button class="btn-delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
-                           <td class="table-goods ice-cream-2">Клубничный пломбир с присыпкой из белого шоколада</td>
+                           <td class="table-goods table-cream-2">Клубничный пломбир с присыпкой из белого шоколада</td>
                            <td class="price-kg">1,5 кг х <span>300 руб.</span></td>
                            <td class="worth">450 руб.</td>
                        </tr>
@@ -97,13 +97,7 @@
                </div>
            </li>
        </ul>
-       <div class="top-contact">
-           <p class="text-time">С 10 до 20, ежедневно</p>
-           <a class="text-tel" href="tel:+78124502525">8 812 450-25-25</a>
-       </div>
-   </header>
-   <main class="container main-width">
-      <ul class="breadcrumbs">
+        <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
@@ -114,11 +108,18 @@
               <a class="breadcrumbs-link">Сливочное</a>
           </li>
       </ul>
+       <div class="top-contact">
+           <p class="text-time">С 10 до 20, ежедневно</p>
+           <a class="text-tel" href="tel:+78124502525">8 812 450-25-25</a>
+       </div>
+        
+   </header>
+   <main class="container">
       <h1 class="main-title">Сливочное мороженое</h1>
       <form class="filters" action="https://echo.htmlacademy.ru" method="post">
-         <fieldset class="filter-sorting filter-fieldset">
+         <fieldset class="filter-fieldset">
              <legend class="filter-title">Сортировка</legend>
-             <div class="filter-field">
+             <div class="filter-sorting filter-field">
                  <select class="sorting" name="sort[]">
                      <option value="popular">по популярности</option>
                      <option value="less-expensive">сначала не дорогие</option>
@@ -127,21 +128,19 @@
                  </select>
              </div>
          </fieldset>
-         <fieldset class="filter-price filter-fieldset">
+         <fieldset class="filter-fieldset">
              <legend class="filter-title">Цена: 100 руб. - 500 руб.</legend>
-             <div class="filter-field">
-                 <div class="filter-price">
+                 <div class="filter-price filter-field">
                      <div class="price-line">
                          <div class="price-range"></div>
+                         <button class="btn-price min-price" type="button"><span class="visually-hidden">Кнопка выбора стоимости от</span></button>
+                         <button class="btn-price max-price" type="button"><span class="visually-hidden">Кнопка выбора стоимости до</span></button> 
                      </div>
-                     <button class="btn-price min-price" type="button"><span class="visually-hidden">Кнопка выбора стоимости от</span></button>
-                     <button class="btn-price max-price" type="button"><span class="visually-hidden">Кнопка выбора стоимости до</span></button> 
-                 </div>
-             </div>
+           </div>
          </fieldset>
-         <fieldset class="filter-fatness filter-fieldset">
+         <fieldset class="filter-fieldset">
              <legend class="filter-title">Жирность</legend>
-             <div class="filter-field">
+             <div class="filter-fatness filter-field">
                 <input class="input-hidden visually-hidden" type="radio" name="percent" id="percent-min">
                 <label class="filter-signature" for="percent-min">0%</label>
                 <input class="input-hidden visually-hidden" type="radio" name="percent" id="percent-10" checked>
@@ -293,7 +292,7 @@
               </li>
           </ul>
    </main>
-   <footer  class="main-footer main-width">
+   <footer  class="main-footer">
         <section class="social">
            <h2 class="visually-hidden">Мы в социальных сетях</h2>
            <ul class="social-list">
@@ -327,14 +326,16 @@
                     <span>Для поставщиков</span>
                    </a></li>
                <li class="link-item"><a href="#" class="info-link">О производстве</a></li>
-               <li class="link-item"><a href="#" class="info-link">Наши документы</a></li>
-               <li class="link-item"><a href="#" class="info-link">Экологические стандарты</a></li>
            </ul>
+            <ul class="links-list">
+                <li class="link-item"><a href="#" class="info-link">Наши документы</a></li>
+               <li class="link-item"><a href="#" class="info-link">Экологические стандарты</a></li>
+            </ul>
         </section>
         <section class="copyright">
             <h2 class="visually-hidden">Авторские права</h2>
             <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-link">
-            <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" class="logo-htmlacademy" height="60" width="190">
+            <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" class="logo-htmlacademy" height="39" width="108">
             </a>
             <p class="text-copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright-link">HTML Academy</a> ©2018</p>
         </section>

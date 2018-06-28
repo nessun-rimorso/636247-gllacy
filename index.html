@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wraper">
+    <div class="site-background-1">
     <header class="main-header main-width">
+        <div class="wraper">
        <nav class="nav">
             <a class="nav-logo">
                 <img class="logo-gllacy" src="img/Logo.svg" width="156" height="64" alt="Gllacy Shop">
@@ -34,14 +35,15 @@
                    </ul>
                </li>
                <li class="nav-item">
-                   <a href="#" class="nav-link">Доставка и оплата</a>
+                   <a href="#" class="nav-link" tabindex>Доставка и оплата</a>
                </li>
                <li class="nav-item">
-                   <a href="#" class="nav-link">О компании</a>
+                   <a href="#" class="nav-link" tabindex>О компании</a>
                </li>
            </ul>
+           
        </nav>
-       <ul class="user-btns">
+            <ul class="user-btns">
            <li class="user-btn">
                <button class="user-btn-image" type="button">
                    <img src="img/Lupa.svg" alt="Поиск" height="17" width="17">
@@ -55,7 +57,7 @@
            <li class="user-btn">
                 <button class="user-btn-image" type="button">
                    <img src="img/Inter.svg" alt="Вход" height="19" width="21">
-                   <p class="user-btn-text">Вход</p>
+                   <p>Вход</p>
                 </button>
               <form class="user-btn-form user-login form-hidden" action="https://echo.htmlacademy.ru" method="post">
                   <label class="visually-hidden" for="email">Форма ввода электронной почты</label>
@@ -75,45 +77,51 @@
                   <p class="empty-cart">Пусто</p>
                   <p class="full-cart">2 товара</p>
               </button>
-                  <div class="cart-inner form-hidden">
+                  <div class="form-hidden cart">
                    <table class="cart-table">
-                       <tr>
-                           <td class="table-data"><button class="delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
-                           <td class="table-data">Пломбир с апельсиновым джемом</td>
-                           <td class="table-data">1,5 кг х <span>200 руб.</span></td>
-                           <td class="table-data">300 руб.</td>
+                       <tr class="row-1">
+                           <td class="delete-product"><button class="btn-delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
+                           <td class="table-goods table-cream-1">Пломбир с апельсиновым джемом</td>
+                           <td class="price-kg">1,5 кг х <span>200 руб.</span></td>
+                           <td class="worth">300 руб.</td>
+                       </tr>
+                       <tr class="row-2">
+                           <td  class="delete-product"><button class="btn-delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
+                           <td class="table-goods table-cream-2">Клубничный пломбир с присыпкой из белого шоколада</td>
+                           <td class="price-kg">1,5 кг х <span>300 руб.</span></td>
+                           <td class="worth">450 руб.</td>
                        </tr>
                        <tr>
-                           <td class="table-data"><button class="delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
-                           <td class="table-data">Клубничный пломбир с присыпкой из белого шоколада</td>
-                           <td class="table-data">1,5 кг х <span>300 руб.</span></td>
-                           <td class="table-data">450 руб.</td>
-                       </tr>
-                       <tr>
-                           <td class="table-total" colspan="4">Итого: 750 руб.</td>
+                           <td class="total-worth" colspan="4">Итого: 750 руб.</td>
                        </tr>
                    </table>
                    <a href="#" class="button cart-link">Оформить заказ</a>
                </div>
            </li>
        </ul>
+ 
        <div class="top-contact">
            <p class="text-time">С 10 до 20, ежедневно</p>
            <a class="text-tel" href="tel:+78124502525">8 812 450-25-25</a>
        </div>
+    </div>
    </header>
     <main class="container">
+        <div class="wraper">
       <h1 class="visually-hidden">Gllacy Shop</h1>
-       <section class="slider main-width">
+       <section class="slider">
           <ul class="slider-list">
-              <li class="slide slide-hidden">
-                  <p class="slide-text">Крем-брюле и пломбир с&nbsp;малиновым джемом</p>
+              <li class="slide slide-active">
+                  <p class="slide-text">Крем-брюле и пломбир с малиновым джемом</p>
+                  <button class="slider-btn button" type="button">Давайте оба!</button>
               </li>
-              <li class="slide-hidden">
-                  <p class="slide-text">Шоколадный пломбир и&nbsp;лимонный сорбет</p>
+              <li class="slide">
+                  <p class="slide-text">Шоколадный пломбир и лимонный сорбет</p>
+                  <button class="slider-btn button" type="button">Давайте оба!</button>
               </li>
-              <li class="slide-hidden">
-                  <p class="slide-text">Пломбир с помадкой и&nbsp;клубничный щербет</p>
+              <li class="slide">
+                  <p class="slide-text">Пломбир с помадкой и клубничный щербет</p>
+                  <button class="slider-btn button" type="button">Давайте оба!</button>
               </li>
           </ul>
            <div class="slider-controls">
@@ -121,7 +129,6 @@
                <button class="slider-control" type="button"><span class="visually-hidden">Второй слайд</span></button>
                <button class="slider-control" type="button"><span class="visually-hidden">Третий слайд</span></button>
            </div>
-           <button class="slider-btn button" type="button">Давайте оба!</button>
        </section>
        <section class="promo main-width">
           <h2 class="visually-hidden">Промо предложения</h2>
@@ -177,7 +184,7 @@
        </section>
        <section class="description-shop main-width">
            <h2 class="visually-hidden">О нас</h2>
-           <p class="title-info">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+           <p class="title-info">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
            <ul class="info-list">
                <li class="info-item">
                    <p class="info-text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
@@ -189,7 +196,7 @@
                    <p class="info-text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
                </li>
                <li class="info-item">
-                   <p class="info-text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+                   <p class="info-text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
                </li>
            </ul>
        </section>
@@ -209,11 +216,14 @@
                  </div>
            </section>
        </div>
+        </div>
        <section class="address">
            <h2 class="visually-hidden">Как до нас добраться</h2>
            <div class="map">
+               <img src="img/map.jpg" alt="Карта проезда" class="map-image" height="430" width="1200">
                <!-- <iframe class="map"></iframe> -->
            </div>
+           <div class="wraper">
            <div class="contact main-width">
                <p class="address-text">
                    Адрес главного офиса <br>
@@ -229,9 +239,13 @@
                </p>
                <button type="button" class="button feedback-btn">Форма обратной связи</button>
            </div>
+        </div>
        </section>
+        
     </main>
-    <footer  class="main-footer main-width">
+    <div class="wraper">
+    <footer  class="main-footer">
+        
         <section class="social">
            <h2 class="visually-hidden">Мы в социальных сетях</h2>
            <ul class="social-list">
@@ -265,18 +279,22 @@
                     <span>Для поставщиков</span>
                    </a></li>
                <li class="link-item"><a href="#" class="info-link">О производстве</a></li>
-               <li class="link-item"><a href="#" class="info-link">Наши документы</a></li>
-               <li class="link-item"><a href="#" class="info-link">Экологические стандарты</a></li>
            </ul>
+            <ul class="links-list">
+                <li class="link-item"><a href="#" class="info-link">Наши документы</a></li>
+               <li class="link-item"><a href="#" class="info-link">Экологические стандарты</a></li>
+            </ul>
         </section>
         <section class="copyright">
             <h2 class="visually-hidden">Авторские права</h2>
             <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-link">
-            <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" class="logo-htmlacademy" height="39" width="111">
+            <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" class="logo-htmlacademy" height="39" width="108">
             </a>
             <p class="text-copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright-link">HTML Academy</a> ©2018</p>
         </section>
+    
     </footer>
+        </div>
     <section class="popup">
        <h2 class="popup-title">Мы обязательно вам ответим!</h2>
         <form action="https://echo.htmlacademy.ru" class="form" method="post">
@@ -290,6 +308,6 @@
         </form>
         <button class="popup-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
-    </div>
+        </div>
 </body>
 </html>
