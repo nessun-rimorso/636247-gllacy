@@ -32,7 +32,7 @@ img {
     padding: 0 27px;
 }
 
-.main-header {
+.main-header .wraper {
     padding-top: 10px;
     position: relative;
     display: flex;
@@ -597,7 +597,7 @@ img {
     width: 100%;
 }
 
-.slider {
+.slider .wraper {
     position: relative;
     padding-top: 275px;
     margin-bottom: 40px;
@@ -834,7 +834,7 @@ img {
     position: relative;
 }
 
-.description-shop{
+.description-shop .wraper {
     background-image: url(../img/pattern.jpg);
     background-repeat: repeat;
     background-color: #e6d6b5;
@@ -907,7 +907,7 @@ img {
 
 /* Блоки новости + подписка */
 
-.row {
+.row .wraper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
@@ -1050,7 +1050,7 @@ img {
 
 /* footer */
 
-.main-footer {
+.main-footer .wraper {
     padding-top: 25px;
     padding-bottom: 25px;
     display: flex;
@@ -1275,7 +1275,7 @@ img {
     background-image: linear-gradient(#9db1a5 0%, #849d8f 590px);
 }
 
-.container {
+.main-paginator {
     display: flex;
     flex-direction: column;
 }
