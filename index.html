@@ -8,104 +8,87 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="site-background-1">
-    <div class="wraper">
-    <header class="main-header main-width">
-       
-       <nav class="nav">
-            <a class="nav-logo">
-                <img class="logo-gllacy" src="img/Logo.svg" width="156" height="64" alt="Gllacy Shop">
-            </a>
-            <ul class="nav-list">
-               <li class="nav-item">
-                   <a href="catalog-index.html" class="nav-link">Каталог</a>
-                   <ul class="submenu">
-                       <li class="submenu-item">Новинки</li>
-                       <li class="submenu-item">
-                           <a href="catalog-index.html" class="submenu-link">Сливочное</a>
-                       </li>
-                       <li class="submenu-item">
-                           <a href="#" class="submenu-link">Щербеты</a>
-                       </li>
-                       <li class="submenu-item">
-                           <a href="#" class="submenu-link">Фруктовый лед</a>
-                       </li>
-                       <li class="submenu-item">
-                           <a href="#" class="submenu-link">Мелорин</a>
-                       </li>
-                   </ul>
-               </li>
-               <li class="nav-item">
-                   <a href="#" class="nav-link" tabindex>Доставка и оплата</a>
-               </li>
-               <li class="nav-item">
-                   <a href="#" class="nav-link" tabindex>О компании</a>
-               </li>
-           </ul>
-           
-       </nav>
-            <ul class="user-btns">
-           <li class="user-btn">
-               <button class="user-btn-image btn-magnifier" type="button">
-                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"><path fill="#FFF" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
-                   <p class="visually-hidden">Поиск</p>
-               </button>
-               <form class="user-btn-form user-search form-hidden" action="https://echo.htmlacademy.ru" method="get">
-                   <label class="visually-hidden" for="search">Форма поиска</label>
-                   <input class="field" type="search" name="search" placeholder="Что ищем">
-               </form>
-           </li>
-           <li class="user-btn">
-                <button class="user-btn-image" type="button">
-                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"><g fill="#FFF"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
-                   <p>Вход</p>
-                </button>
-              <form class="user-btn-form user-login form-hidden" action="https://echo.htmlacademy.ru" method="post">
-                  <label class="visually-hidden" for="email">Форма ввода электронной почты</label>
-                  <input class="field" type="email" name="email" placeholder="Электронная почта" required autocomplete="on">
-                  <label class="visually-hidden" for="password">Форма ввода пароля</label>
-                  <input class="field" type="password" name="password" placeholder="Пароль" required autocomplete="off">
-                  <a class="button btn-inter" href="#">Войти</a>
-                  <div class="form-link">
-                      <a class="link-forget-password" href="#">Забыли пароль?</a>
-                      <a class="link-login" href="#">Новая регистрация</a>
-                  </div>
-              </form>
-           </li>
-           <li class="user-btn">
-              <button class="user-btn-image" type="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
-                  <p class="empty-cart">Пусто</p>
-                  <p class="full-cart">2 товара</p>
-              </button>
-                  <div class="form-hidden cart">
-                   <table class="cart-table">
-                       <tr class="row-1">
-                           <td class="delete-product"><button class="btn-delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
-                           <td class="table-goods table-cream-1">Пломбир с апельсиновым джемом</td>
-                           <td class="price-kg">1,5 кг х <span>200 руб.</span></td>
-                           <td class="worth">300 руб.</td>
-                       </tr>
-                       <tr class="row-2">
-                           <td  class="delete-product"><button class="btn-delete-product" type="button"><span class="visually-hidden">Удалить из корзины</span></button></td>
-                           <td class="table-goods table-cream-2">Клубничный пломбир с присыпкой из белого шоколада</td>
-                           <td class="price-kg">1,5 кг х <span>300 руб.</span></td>
-                           <td class="worth">450 руб.</td>
-                       </tr>
-                       <tr>
-                           <td class="total-worth" colspan="4">Итого: 750 руб.</td>
-                       </tr>
-                   </table>
-                   <a href="#" class="button cart-link">Оформить заказ</a>
-               </div>
-           </li>
-       </ul>
- 
-       <div class="top-contact">
-           <p class="text-time">С 10 до 20, ежедневно</p>
-           <a class="text-tel" href="tel:+78124502525">8 812 450-25-25</a>
-       </div>
-   </header>
+    <div class="site-background site-background-1">
+        <div class="wraper">
+            <header class="main-header">
+                <nav class="nav">
+                    <a class="nav-logo">
+                        <img class="logo-gllacy" src="img/Logo.svg" width="156" height="64" alt="Gllacy Shop">
+                    </a>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a  class="nav-link" href="catalog-index.html">Каталог</a>
+                            <div class="wrap-sub">
+                                <ul class="submenu">
+                                    <li class="submenu-item"><span>Новинки</span></li>
+                                    <li class="submenu-item">
+                                        <a class="submenu-link  active">Сливочное</a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="#" class="submenu-link">Щербеты</a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="#" class="submenu-link">Фруктовый лед</a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="#" class="submenu-link">Мелорин</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Доставка и оплата</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">О компании</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="user-btns">
+                    <li class="user-btn">
+                        <button class="user-btn-image btn-magnifier" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"><path fill="#FFF" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
+                            <p class="visually-hidden">Поиск</p>
+                            <div class="form-hidden">
+                                <form class="user-form user-search form-hidden" action="https://echo.htmlacademy.ru" method="get">
+                                    <label class="visually-hidden" for="search">Форма поиска</label>
+                                    <input class="field" type="search" name="search" placeholder="Что ищем">
+                                </form>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="user-btn">
+                        <button class="user-btn-image" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"><g fill="#FFF"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
+                            <p>Вход</p>
+                            <div class="form-hidden">
+                                <form class="user-form user-login form-hidden" action="https://echo.htmlacademy.ru" method="post">
+                                    <label class="visually-hidden" for="email">Форма ввода электронной почты</label>
+                                    <input class="field" type="email" name="email" placeholder="Электронная почта" required autocomplete="on">
+                                    <label class="visually-hidden" for="password">Форма ввода пароля</label>
+                                    <input class="field" type="password" name="password" placeholder="Пароль" required autocomplete="off">
+                                    <a class="button btn-inter" href="#">Войти</a>
+                                    <div class="form-link">
+                                        <a class="link-forget-password"     href="#">Забыли пароль?</a>
+                                        <a class="link-login" href="#">Новая регистрация</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="user-btn">
+                        <button class="user-btn-image" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
+                            <p class="empty-cart">Пусто</p>
+                            <p class="full-cart">2 товара</p>
+                        </button>
+                    </li>
+                </ul>
+                <div class="top-contact">
+                    <p class="text-time">С 10 до 20, ежедневно</p>
+                    <a class="text-tel" href="tel:+78124502525">8 812 450-25-25</a>
+                </div>
+            </header>
         </div>
     <main class="container">
         <div class="wraper">
@@ -126,12 +109,12 @@
               </li>
           </ul>
            <div class="slider-controls">
-               <button class="slider-control active" type="button"><span class="visually-hidden">Первый слайд</span></button>
-               <button class="slider-control" type="button"><span class="visually-hidden">Второй слайд</span></button>
-               <button class="slider-control" type="button"><span class="visually-hidden">Третий слайд</span></button>
+               <button class="slider-control control-1 active" type="button"><span class="visually-hidden">Первый слайд</span></button>
+               <button class="slider-control control-2" type="button"><span class="visually-hidden">Второй слайд</span></button>
+               <button class="slider-control control-3" type="button"><span class="visually-hidden">Третий слайд</span></button>
            </div>
        </section>
-       <section class="promo main-width">
+       <section class="promo">
           <h2 class="visually-hidden">Промо предложения</h2>
           <ul class="promo-items">
               <li class="promo-item">
@@ -146,7 +129,7 @@
               </li>
           </ul>
        </section>
-       <section class="goods main-width">
+       <section class="goods">
          <h2 class="visually-hidden">Хиты продаж</h2>
          <ul class="goods-items">
             <li>
@@ -183,7 +166,7 @@
             </li>
          </ul>
        </section>
-       <section class="description-shop main-width">
+       <section class="description-shop">
            <h2 class="visually-hidden">О нас</h2>
            <p class="title-info">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
            <ul class="info-list">
@@ -201,7 +184,7 @@
                </li>
            </ul>
        </section>
-       <div class="row main-width">
+       <div class="row">
            <article class="news row-box">
                   <h3 class="title-blog">Новое в нашем блоге</h3>
                   <a class="news-blog" href="#">10 способов сервировки фруктовых щербетов к столу</a>
@@ -221,11 +204,13 @@
        <section class="address">
            <h2 class="visually-hidden">Как до нас добраться</h2>
            <div class="map">
+               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A107c8ea6329b163f17d0e1eacf829505989084994b47b28e82191d0255a5e0e1&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe>
+               <!--
                <img src="img/map.jpg" alt="Карта проезда" class="map-image" height="430" width="1200">
-               <!-- <iframe class="map"></iframe> -->
+                -->
            </div>
            <div class="wraper">
-           <div class="contact main-width">
+           <div class="contact">
                <p class="address-text">
                    Адрес главного офиса <br>
                    и офлайн магазина: <br>
@@ -242,11 +227,11 @@
            </div>
         </div>
        </section>
-        
+
     </main>
     <div class="wraper">
     <footer  class="main-footer">
-        
+
         <section class="social">
            <h2 class="visually-hidden">Мы в социальных сетях</h2>
            <ul class="social-list">
@@ -293,22 +278,44 @@
             </a>
             <p class="text-copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright-link">HTML Academy</a> ©2018</p>
         </section>
-    
+
     </footer>
         </div>
-    <section class="popup">
-       <h2 class="popup-title">Мы обязательно вам ответим!</h2>
-        <form action="https://echo.htmlacademy.ru" class="form" method="post">
+    <div class="modal-overlay">
+    <section class="modal-popup">
+          <h2 class="popup-title">Мы обязательно вам ответим!</h2>
+          <form action="https://echo.htmlacademy.ru" class="popup-form" method="post">
               <label class="visually-hidden" for="name">Как Вас зовут?</label>
               <input class="popup-name field" type="text" name="name" placeholder="Как Вас зовут?" required autocomplete="on">
               <label class="visually-hidden" for="email">Ваша почта для ответа?</label>
               <input class="popup-email field" type="email" name="email" placeholder="Ваша почта для ответа?" required autocomplete="on">
               <label class="visually-hidden" for="comment">Напишите что-нибудь...</label>
-              <textarea class="popup-comment field" name="comment" id="comment" cols="30" rows="10" placeholder="Напишите что-нибудь..." required></textarea>
+              <textarea class="popup-comment field" name="comment" id="comment" cols="30" rows="6" placeholder="Напишите что-нибудь..." required></textarea>
               <button class="button popup-btn" type="submit">Отправить</button>
         </form>
-        <button class="popup-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+        <button class="popup-close" type="button">Закрыть окно</button>
     </section>
+    </div>
         </div>
+     <script>
+         
+  var link = document.querySelector(".feedback-btn");
+  
+  var popup = document.querySelector(".modal-overlay");
+  var close = popup.querySelector(".popup-close");
+  
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+  });
+  
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+  });
+
+</script>
+    
+
 </body>
 </html>
