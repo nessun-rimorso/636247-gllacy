@@ -418,6 +418,7 @@ img {
     position: relative;
     width: 265px;
     padding: 8px 5px 8px 45px;
+    text-align: start;
 }
 
 .price-kg {
@@ -548,7 +549,7 @@ img {
     text-align: end;
 }
 
-.text-time {
+.top-contact p {
     font-size: 14px;
     line-height: 16px;
     font-weight: bold;
@@ -557,7 +558,7 @@ img {
     margin-bottom: 5px;
 }
 
-.text-tel {
+.top-contact a {
     font-size: 22px;
     line-height: 24px;
     font-weight: bold;
@@ -633,8 +634,12 @@ img {
 .slider-controls {
     position: absolute;
     bottom: 22px;
-    left: 0;
+    left: 27px;
     z-index: 20;
+}
+
+.no-js .slider-controls {
+    display: none;
 }
 
 .slider-control {
@@ -998,6 +1003,19 @@ img {
     height: 430px;
 }
 
+.no-js .interactive-map {
+    display: none;
+}
+
+.js .map-image {
+    display: none;
+}
+
+.no-js .map-image {
+    margin: 0 auto;
+    display: block;
+}
+
 .address {
     position: relative;
 }
@@ -1043,10 +1061,7 @@ img {
     padding: 10px 28px;
 }
 
-.map-image {
-    margin: 0 auto;
-    display: block;
-}
+
 
 /* footer */
 
