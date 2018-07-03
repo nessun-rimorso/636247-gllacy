@@ -1,3 +1,28 @@
+// no-js
+
+document.documentElement
+    .classList.replace('no-js', 'js');
+
+// popup
+
+var link = document.querySelector(".feedback-btn");
+var popup = document.querySelector(".modal-overlay");
+var close = popup.querySelector(".popup-close");
+var userName = document.querySelector(".popup-name");
+  
+link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+    userName.focus();
+});
+  
+close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+});
+
+// slider
+
 var background = document.querySelector(".site-background");
 var control1 = document.querySelector(".control-1");
 var control2 = document.querySelector(".control-2");
@@ -45,3 +70,27 @@ control3.addEventListener("click", function (evt) {
     slide2.classList.remove("active");
     slide3.classList.add("active");
 });
+
+// map
+
+ymaps.ready(function() {
+
+    var myMap = new ymaps.Map("map", {
+        center: [59.939365, 30.329108],
+        zoom: 16,
+        controls: []
+    });
+    
+    myMap.behaviors.disable("scrollZoom");
+    
+    var MapPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+        balloonMaxWidth: 320,
+        iconLayout: "default#image",
+        iconImageHref: "./img/map-pin.png",
+        iconImageSize: [218, 142],
+        iconImageOffset: [-50, -140]
+    });
+
+    myMap.geoObjects.add(MapPlacemark);
+
+}); 

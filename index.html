@@ -53,7 +53,7 @@
                         <div class="form-hidden">
                             <form class="user-form user-search" action="https://echo.htmlacademy.ru" method="get">
                                 <label class="visually-hidden" for="search">Форма поиска</label>
-                                <input class="field" type="search" name="search" placeholder="Что ищем">
+                                <input class="field" type="search" id="search" placeholder="Что ищем">
                             </form>
                         </div>
                     </li>
@@ -65,9 +65,9 @@
                         <div class="form-hidden">
                             <form class="user-form user-login" action="https://echo.htmlacademy.ru" method="post">
                                 <label class="visually-hidden" for="email">Форма ввода электронной почты</label>
-                                <input class="field" type="email" name="email" placeholder="Электронная почта" required autocomplete="on">
+                                <input class="field" type="email" id="email" placeholder="Электронная почта" required autocomplete="on">
                                 <label class="visually-hidden" for="password">Форма ввода пароля</label>
-                                <input class="field" type="password" name="password" placeholder="Пароль" required autocomplete="off">
+                                <input class="field" type="password" id="password" placeholder="Пароль" required autocomplete="off">
                                 <a class="button btn-inter"     href="#">Войти</a>
                                 <div class="form-link">
                                     <a href="#">Забыли пароль?</a>
@@ -139,8 +139,10 @@
                         <li>
                             <article class="goods-item goods-item-hit">
                                 <img class="goods-item-image" src="img/cream-orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" height="267" width="267">
-                                <p class="goods-text">310₽ <span>/кг</span></p>
-                                <p class="text-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                                <p class="goods-text">310<span class="ruble">₽</span><span>/кг</span></p>
+                                <div class="text-description">
+                                    <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                                </div>
                                 <a href="#" class="goods-btn button">Быстрый просмотр</a>
                                 <div class="goods-hover"></div>
                             </article>
@@ -148,8 +150,10 @@
                         <li>
                             <article class="goods-item goods-item-hit">
                                 <img class="goods-item-image" src="img/cream-coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" height="267" width="267">
-                                <p class="goods-text">380₽ <span>/кг</span></p>
-                                <p class="text-description">Сливочно-кофейное с кусочками шоколада</p>
+                                <p class="goods-text">380<span class="ruble">₽</span><span>/кг</span></p>
+                                <div class="text-description">
+                                    <p>Сливочно-кофейное с кусочками шоколада</p>
+                                </div>
                                 <a href="#" class="goods-btn button">Быстрый просмотр</a>
                                 <div class="goods-hover"></div>
                             </article>
@@ -157,8 +161,10 @@
                         <li>
                             <article class="goods-item goods-item-hit">
                                 <img class="goods-item-image" src="img/cream-strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" height="267" width="267">
-                                <p class="goods-text">355₽ <span>/кг</span></p>
-                                <p class="text-description text-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
+                                <p class="goods-text">355<span class="ruble">₽</span><span>/кг</span></p>
+                                <div class="text-description">
+                                    <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+                                </div>
                                 <a href="#" class="goods-btn button">Быстрый просмотр</a>
                                 <div class="goods-hover"></div>
                             </article>
@@ -166,8 +172,10 @@
                         <li>
                             <article class="goods-item goods-item-hit">
                                 <img class="goods-item-image" src="img/creme-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" height="267" width="267">
-                                <p class="goods-text">415₽ <span>/кг</span></p>
-                                <p class="text-description">Сливочное крем-брюле с карамельной подливкой</p>
+                                <p class="goods-text">415<span class="ruble">₽</span><span>/кг</span></p>
+                                <div class="text-description">
+                                    <p>Сливочное крем-брюле с карамельной подливкой</p>
+                                </div>
                                 <a href="#" class="goods-btn  button">Быстрый просмотр</a>
                                 <div class="goods-hover"></div>
                             </article>
@@ -299,7 +307,7 @@
             <section class="modal-popup">
                 <h2 class="popup-title">Мы обязательно вам ответим!</h2>
                 <form action="https://echo.htmlacademy.ru" class="popup-form" method="post">
-                    <label class="visually-hidden" for="name">Как Вас зовут?</label>
+                    <label class="visually-hidden" id="name">Как Вас зовут?</label>
                     <input class="popup-name field" type="text" name="name" placeholder="Как Вас зовут?" required autocomplete="on">
                     <label class="visually-hidden" for="email">Ваша почта для ответа?</label>
                     <input class="popup-email field" type="email" name="email" placeholder="Ваша почта для ответа?" required autocomplete="on">
@@ -311,10 +319,7 @@
             </section>
         </div>
     </div>
-    <script src="js/popup.js"></script>
-    <script src="js/no-js.js"></script>
-    <script src="js/slider.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/map.js"></script>
+    <script src="js/js.js"></script>
 </body>
 </html>
