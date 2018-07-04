@@ -303,21 +303,20 @@
                 </section>
             </div>
         </footer>  
-        <div class="modal-overlay">
-            <section class="modal-popup">
-                <h2 class="popup-title">Мы обязательно вам ответим!</h2>
-                <form action="https://echo.htmlacademy.ru" class="popup-form" method="post">
-                    <label class="visually-hidden" id="name">Как Вас зовут?</label>
-                    <input class="popup-name field" type="text" name="name" placeholder="Как Вас зовут?" required autocomplete="on">
-                    <label class="visually-hidden" for="email">Ваша почта для ответа?</label>
-                    <input class="popup-email field" type="email" name="email" placeholder="Ваша почта для ответа?" required autocomplete="on">
-                    <label class="visually-hidden" for="comment">Напишите что-нибудь...</label>
-                    <textarea class="popup-comment field" name="comment" id="comment" cols="30" rows="6" placeholder="Напишите что-нибудь..." required></textarea>
-                    <button class="button popup-btn" type="submit">Отправить</button>
-                </form>
-                <button class="popup-close" type="button">Закрыть окно</button>
-            </section>
-        </div>
+        <section class="modal-popup">
+            <h2 class="popup-title">Мы обязательно вам ответим!</h2>
+            <form action="https://echo.htmlacademy.ru" class="popup-form" method="post">
+                <label class="visually-hidden" id="name">Как Вас зовут?</label>
+                <input class="popup-name field" type="text" name="name"     placeholder="Как Вас зовут?" autocomplete="on">
+                <label class="visually-hidden" for="email">Ваша почта для ответа?</label>
+                <input class="popup-email field" type="email" name="email" placeholder="Ваша почта для ответа?" autocomplete="on">
+                <label class="visually-hidden" for="comment">Напишите что-нибудь...</label>
+                <textarea class="popup-comment field" name="comment" id="comment" cols="30" rows="6" placeholder="Напишите что-нибудь..."></textarea>
+                <button class="button popup-btn" type="submit">Отправить</button>
+            </form>
+            <button class="popup-close" type="button">Закрыть окно</button>
+        </section>
+        <div class="modal-overlay"></div>
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/js.js"></script>
