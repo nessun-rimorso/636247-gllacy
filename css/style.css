@@ -1131,6 +1131,8 @@ li:nth-of-type(4n) .goods-item {
 .interactive-map {
     height: 430px;
     margin-top: -430px;
+    width: 100%;
+    height: 430px;
 }
 
 .no-js .interactive-map {
@@ -1771,7 +1773,7 @@ li:nth-of-type(4n) .goods-item {
 }
 
 .filter-fatness {
-    padding: 0 17px;
+    padding: 0 17px 0 7px;
 }
 
 .filter-fatness .filter-signature {
@@ -1779,11 +1781,11 @@ li:nth-of-type(4n) .goods-item {
 }
 
 .filter-fatness .filter-signature:not(:last-of-type) {
-    margin-right: 17px;
+    margin-right: 7px;
 }
 
 .filter-stuffing {
-    padding: 0 16px;
+    padding: 0 16px 0 6px;
     min-width: 702px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1809,6 +1811,7 @@ li:nth-of-type(4n) .goods-item {
             box-shadow: inset 0px 0px 0px 4px #e6ebe9;
     border-radius: 50%;
     margin-right: 10px;
+    margin-left: 10px;
     -webkit-transform: translateY(-3px);
         -ms-transform: translateY(-3px);
             transform: translateY(-3px);
@@ -1822,6 +1825,7 @@ li:nth-of-type(4n) .goods-item {
     -webkit-box-shadow: inset 0px 0px 0px 2px #e6ebe9;
             box-shadow: inset 0px 0px 0px 2px #e6ebe9;
     margin-right: 12px;
+    margin-left: 10px;
     -webkit-transform: translate(-1px, -3px);
         -ms-transform: translate(-1px, -3px);
             transform: translate(-1px, -3px);
